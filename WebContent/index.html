@@ -1,17 +1,38 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html ng-app="Teste">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Aprendendo a usar o Angular</title>
         <script type="text/javascript" src="resources/js/angular.min.js"></script>        
+        <script type="text/javascript" src="resources/js/primeiraController.js"></script>
         <link href="resources/css/style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">        
     </head>
-    <body ng-app ng-init="meuNome='Xorge'; meuSobrenome='André'">
-       <input type="text" ng-model="meuNome"></input>
+    <body ng-controller="primeiraController as prima" id="corpo">
+       <label>Informe o seu nome:</label>
+       <input type="text" ng-model="prima.meuNome">
+       <br />
+       <label>Agora o sobrenome, xovem:</label>
+       <input type="text" ng-model="prima.meuSobrenome">
 	   <h1>Olá mundo, estou aprendendo Angular agora!</h1>
-	   <h1>Olha só, "Angular, qual é o meu nome?" {{meuNome}}</h1>
-	   <h2>Agora o meu sobrenome é {{meuSobrenome}}</h2>
-	   <h2>Agora junto, o nome completo fica assim, {{meuNome}} {{meuSobrenome}}</h2>
+	   <h1>Olha só, "Angular, qual é o meu nome?" {{prima.meuNome}}</h1>
+	   <h2>Agora o meu sobrenome é {{prima.meuSobrenome}}</h2>
+	   <h2>Agora junto, o nome completo fica assim, {{prima.meuNome}} {{prima.meuSobrenome}}</h2>
+	   
+	   <label>Outra funçãozinha em JS</label>
+	   <hr>
+	   <br />
+	   <div class="bloqueto">
+		   <a href="#" ng-click="addAoContador();">
+		       <img alt="Cliques insanos!" src="resources/images/click-bait.jpg">
+		   </a>
+		   <h1>Vamos aos números de cliques: {{contador}}</h1>
+	   </div>
+	   <div class="bloqueto">
+            <h1>Loop com array</h1>
+            <ul>
+                <li ng-repeat="variavelMaluca in pessoas">{{variavelMaluca}}</li>
+            </ul>
+       </div>
     </body>
 </html>

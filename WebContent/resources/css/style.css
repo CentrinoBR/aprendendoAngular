@@ -2,3 +2,13 @@ body {
 	font-family: 'Roboto', sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
+
+.bloqueto {
+	display: block;
+	padding-right: 30px;
+	float: left;
+}
+
+li {
+	list-style-type: upper-roman;
+}
