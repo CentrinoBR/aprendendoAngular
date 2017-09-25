@@ -9,6 +9,6 @@ app.controller('primeiraController', ['$scope', function($scope) {
 		$scope.contador++;	
 	};
 	
-	$scope.pessoas = ['Rayanne', 'Railson', 'Rayanninha, a.k.a. Clarice', 'Robertinho a.k.a. Henrique', 'Que sucesso juventude'];
+	$scope.pessoas = ['Rayanne', 'Railson', 'Rayanninha, a.k.a. Clarice', 'Robertinho a.k.a. Henrique', 'Que sucesso juventude', 'Outro elemento do array'];
 	
 }]);
